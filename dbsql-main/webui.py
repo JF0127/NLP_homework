@@ -94,7 +94,7 @@ def get_all_complaint_table_names(db_conn, prefix):
 
 # --- 4. 数据获取函数 (真实数据 for Page 1 & Alerts) ---
 def fetch_complaint_volume_data_from_db():
-    pprint(f"数据库操作：正在获取2023-2024年度月度投诉总量...")
+    print(f"数据库操作：正在获取2023-2024年度月度投诉总量...")
     conn = connect_db(MAIN_DB_NAME)
     if not conn: return pd.DataFrame({'月份': [], '每月投诉量': []})
 
